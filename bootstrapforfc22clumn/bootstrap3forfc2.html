@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="<%author_name>" />
   <meta name="description" content="<%introduction>" />
-  <title  ><%blog_name><!--permanent_area--> |<%sub_title><!--/permanent_area--><!--date_area--> |<!--/date_area--><!--category_area--> |<!--/category_area--><!--not_permanent_area--><%sub_title><!--/not_permanent_area--></title>
+  <title><%blog_name><!--permanent_area--> |<%sub_title><!--/permanent_area--><!--date_area--> |<!--/date_area--><!--category_area--> |<!--/category_area--><!--not_permanent_area--><%sub_title><!--/not_permanent_area--></title>
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" charset="<%template_charset>" />
 
   <!--[if lt IE 9]>
@@ -20,7 +20,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-  <!-- ÉJÉXÉ^É}ÉCÉYópCSS -->
+  <!-- „Ç´„Çπ„Çø„Éû„Ç§„Ç∫Áî®CSS -->
   <link rel="stylesheet" media="screen" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="<%css_link>" charset="<%template_charset>" />
 
@@ -48,7 +48,7 @@
   <div class="container">
     <div class="container-inner">
 
-      <!-- ÉwÉbÉ_ -->
+      <!-- „Éò„ÉÉ„ÉÄ -->
       <div class="well" style="padding: 8px;">
         <div class="header">
 
@@ -77,7 +77,7 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li><a href="<%url>" title="About">About</a></li><!-- ÉuÉçÉOÇÃê‡ñæãLéñÇÃÉäÉìÉNÇ∑ÇÈ -->
+                  <li><a href="<%url>" title="About">About</a></li><!-- „Éñ„É≠„Ç∞„ÅÆË™¨ÊòéË®ò‰∫ã„ÅÆ„É™„É≥„ÇØ„Åô„Çã -->
                   <li><a href="<%url>archives.html" title="List">List</a></li>
                   <li><a href="<%url>?xml" title="RSS">RSS1.0</a></li>
                   <li><a href="<%url>?admin" title="Admin">Admin</a></li>
@@ -120,7 +120,7 @@
 
               <!--more_link-->
               <div class="clearfix"></div>
-              <a class="btn btn-primary" href="<%topentry_link>#more">ë±Ç´Çì«Çﬁ</a>
+              <a class="btn btn-primary" href="<%topentry_link>#more">Á∂ö„Åç„ÇíË™≠„ÇÄ</a>
               <!--/more_link-->
 
               <!--more-->
@@ -136,9 +136,11 @@
                   <div class="community">
                     <%template_theme>&nbsp;:&nbsp;<a href="<%topentry_thread_link>" title="<%topentry_thread_title>"><%topentry_thread_title></a>&nbsp<%template_genre>&nbsp;:&nbsp;<a href="<%topentry_community_janrelink>" title="<%topentry_community_janrename>"><%topentry_community_janrename></a>
                   </div>
+                  <!--/community-->
                 </div>
               </ul>
-
+              <!--/entry-category -->
+              
               <!--
               <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
               xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
@@ -161,18 +163,21 @@
             <!--permanent_area-->
             <ul class="pager">
               <!--preventry-->
-              <li class="previous"><a href="<%preventry_url>">Å© Newer</a></li>
+              <li class="previous"><a href="<%preventry_url>">‚Üê Newer</a></li>
+              <!--/preventry-->
               <!--nextentry-->
-              <li class="next"><a href="<%nextentry_url>">Older Å®</a></li>
+              <li class="next"><a href="<%nextentry_url>">Older ‚Üí</a></li>
+              <!--/nextentry-->
             </ul>
+            <!--/permanent_area-->
 
             <!--not_permanent_area-->
             <ul class="pager">
             <!--prevpage-->
-              <li class="previous"><a href="<%prevpage_url>">Å© Newer</a></li>
+              <li class="previous"><a href="<%prevpage_url>">‚Üê Newer</a></li>
             <!--/prevpage-->
             <!--nextpage-->
-              <li class="next"><a href="<%nextpage_url>">Older Å®</a></li>
+              <li class="next"><a href="<%nextpage_url>">Older ‚Üí</a></li>
             <!--/nextpage-->
             </ul>
             <!--/not_permanent_area-->
@@ -186,11 +191,12 @@
                 </div>
                 <div class="com-body">
                   <%comment_body>
+                </div>  
                 <div class="post-meta textright">
                   <span class="post-author"><%comment_mail+name> #<%comment_trip></span>
                   <span class="post-category"><%comment_year>.<%comment_month>.<%comment_day> <%comment_hour>:<%comment_minute></span>
                   <span class="post-tag"><%comment_url+str>[<a href="<%comment_edit_link>">EDIT</a>]</span>
-                  <a class="btn" href="#comment_form_top" title="Ç±ÇÃÉRÉÅÉìÉgÇ…ÉåÉX" onclick="com_res_to(<%comment_no>);">ï‘êM</a>
+                  <a class="btn" href="#comment_form_top" title="„Åì„ÅÆ„Ç≥„É°„É≥„Éà„Å´„É¨„Çπ" onclick="com_res_to(<%comment_no>);">Ëøî‰ø°</a>
                 </div>
               </div>
             </div>
@@ -282,7 +288,7 @@
 
         <div class="col-md-4">
 
-          <!--Å´TAB ïsóvÇ»éûÇÕçÌèúÇµÇƒÇ≠ÇæÇ≥Ç¢-->
+          <!--‚ÜìTAB ‰∏çË¶Å„Å™ÊôÇ„ÅØÂâäÈô§„Åó„Å¶„Åè„Å†„Åï„ÅÑ-->
           <div class="well">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#A" data-toggle="tab">Entry</a></li>
@@ -296,10 +302,11 @@
                 <li>
                   <a href="<%recent_link>" title="<%recent_title>"><%recent_title> (<%recent_month>/<%recent_day>)</a>
                 </li>
+                <!--/recent-->
                 <li>
                   <script language="JavaScript" charset="euc-jp">
                   var entry_count =<!--archive--> <%archive_count> +<!--/archive--> 0;
-                  document.write('<a href="<%url>?all" title="ëSÇƒÇÃãLéñàÍóó">ëSÇƒÇÃãLéñàÍóó ',entry_count,"åè</a>");
+                  document.write('<a href="<%url>?all" title="ÂÖ®„Å¶„ÅÆË®ò‰∫ã‰∏ÄË¶ß">ÂÖ®„Å¶„ÅÆË®ò‰∫ã‰∏ÄË¶ß ',entry_count,"‰ª∂</a>");
                   </script>
                 </li>
               </div>
@@ -318,7 +325,7 @@
 
             </div>
           </div>
-          <!--Å™TAB ïsóvÇ»éûÇÕçÌèúÇµÇƒÇ≠ÇæÇ≥Ç¢-->
+          <!--‚ÜëTAB ‰∏çË¶Å„Å™ÊôÇ„ÅØÂâäÈô§„Åó„Å¶„Åè„Å†„Åï„ÅÑ-->
 
           <!--plugin-->
           <!--plugin_first-->
@@ -349,7 +356,7 @@
 
     <div class="clearfix"></div>
 
-    <!-- ÉtÉbÉ^ -->
+    <!-- „Éï„ÉÉ„Çø -->
     <div class="footer">
       <div class="footer-inner">
         <small><address>Copyright &copy; <%blog_name> All Rights Reserved.</address>
