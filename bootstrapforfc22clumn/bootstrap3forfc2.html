@@ -203,10 +203,9 @@
             <!--/comment-->
 
             <!--commentform-->
-            <form class="form-horizontal">
+            <form class="form-horizontal action="./" method="post" name="comment_form" id="comment_form"">
               <fieldset>
                 <h4 class="sub_title"><%template_post_comment></h4>
-                <form action="./" method="post" name="comment_form" id="comment_form">
                 <input type="hidden" name="mode" value="regist" />
                 <input type="hidden" name="comment[no]" value="<%pno>" />
                 <div class="form-group">
@@ -218,7 +217,7 @@
                 <div class="form-group">
                   <label for="subject" class="col-md-2 control-label"><%template_title></label>
                   <div class="col-md-6">
-                    <input class="form-control" id=<input id="subject" type="text" name="edit[title]" value="<%edit_title>" />
+                    <input class="form-control" id="subject" type="text" name="edit[title]" value="<%edit_title>" />
                   </div>
                 </div>
                 <div class="form-group">
@@ -246,20 +245,19 @@
                     <input class="form-control" id="pass" type="password"  name="comment[pass]" size="20" />
                   </div>
                 </div>
-                <div class="checkbox">
+                <div class="form-group form-inline">
                   <label for="himitu" class="col-md-3"><%template_private></label>
                   <input id="himitu" type="checkbox" name="edit[himitu]" /><%template_private_check>
+                  <input class="btn  btn-default btn-sm" type="submit" />
                 </div>
-                <button type="submit" class="btn btn-primary"><input type="submit" /></button>
               </fieldset>
             </form>
           <!--/comment_area-->
-          
-          
+
+
           <!--edit_area-->
-          <form class="form-horizontal">
+          <form class="form-horizontal action="./" method="post" name="comment_form" id="comment_form"">
             <fieldset>
-                <form action="./" method="post" name="comment_form" id="comment_form">
                 <input type="hidden" name="mode" value="edit" />
                 <input type="hidden" name="mode2" value="edited" />
                 <input type="hidden" name="edit[rno]" value="<%eno>" />
@@ -272,7 +270,7 @@
                 <div class="form-group">
                   <label for="subject" class="col-md-2 control-label"><%template_title></label>
                   <div class="col-md-6">
-                    <input class="form-control" id=<input id="subject" type="text" name="edit[title]" value="<%edit_title>" />
+                    <input class="form-control" id="subject" type="text" name="edit[title]" value="<%edit_title>" />
                   </div>
                 </div>
                 <div class="form-group">
@@ -300,11 +298,11 @@
                     <input class="form-control" id="pass" type="password"  name="edit[pass]" size="20" />
                   </div>
                 </div>
-                <div class="checkbox">
+                <div class="form-group form-inline">
                   <label for="himitu" class="col-md-3"><%template_private></label>
                   <input id="himitu" type="checkbox" name="edit[himitu]" /><%template_private_check>
+                  <input class="btn  btn-default btn-sm" type="submit" />
                 </div>
-                <button type="submit" class="btn btn-primary"><input type="submit" /></button>
               </fieldset>
             </form>
           <!--/edit_area-->
