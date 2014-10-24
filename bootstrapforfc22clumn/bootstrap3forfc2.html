@@ -202,76 +202,127 @@
             </div>
             <!--/comment-->
 
-            <div class="form">
-              <h4 class="sub_title"><%template_post_comment></h4>
-              <form action="./" method="post" name="comment_form" id="comment_form">
-                <dl>
-                  <dt>
-                    <input type="hidden" name="mode" value="regist" />
-                    <input type="hidden" name="comment[no]" value="<%pno>" />
-                    <label for="name"><%template_name></label>
-                  </dt>
-                  <dd><input id="name" type="text" name="comment[name]" size="30" value="<%cookie_name>" /></dd>
-                  <dt><label for="subject"><%template_title></label></dt>
-                  <dd><input id="subject" name="comment[title]" type="text" size="30" value="No title" onblur="if(this.value == '') this.value='No title';" onfocus="if(this.value == 'No title') this.value='';" /></dd>
-                  <dt><label for="mail"><%template_address></label></dt>
-                  <dd><input id="mail" type="text" name="comment[mail]" size="30" value="<%cookie_mail>" /></dd>
-                  <dt><label for="url">URL</label></dt>
-                  <dd><input id="url" type="text" name="comment[url]" size="30" value="<%cookie_url>" /></dd>
-                  <dt><label for="comment"><%template_body></label></dt>
-                  <dd><script type="text/javascript" src="<%template_comment_js>"></script></dd>
-                  <dd><textarea id="comment" cols="50" rows="5" name="comment[body]"></textarea></dd>
-                  <dt><label for="pass"><%template_password></label></dt>
-                  <dd><input id="pass" type="password" name="comment[pass]" size="20" /></dd>
-                  <dt><%template_private></dt>
-                  <dd><input id="himitu" type="checkbox" name="comment[himitu]" /><label for="himitu"><%template_private_check></label></dd>
-                </dl>
-                <p class="form_btn"><input type="submit" value="<%template_send>" /></p>
-              </form>
-            </div>
-          </div>
+            <!--commentform-->
+            <form class="form-horizontal">
+              <fieldset>
+                <h4 class="sub_title"><%template_post_comment></h4>
+                <form action="./" method="post" name="comment_form" id="comment_form">
+                <input type="hidden" name="mode" value="regist" />
+                <input type="hidden" name="comment[no]" value="<%pno>" />
+                <div class="form-group">
+                  <label for="name" class="col-md-2 control-label"><%template_name></label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="name" type="text" name="comment[name]" value="<%cookie_name>" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject" class="col-md-2 control-label"><%template_title></label>
+                  <div class="col-md-6">
+                    <input class="form-control" id=<input id="subject" type="text" name="edit[title]" value="<%edit_title>" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="mail" class="col-md-2 control-label"><%cookie_mail></label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="mail" type="text" name="comment[mail]" value="<%cookie_mail>" />
+                  </div>
+    		    </div>
+    			<div class="form-group">
+      			  <label for="url" class="col-md-2 control-label">URL</label>
+      				<div class="col-md-6">
+        			  <input class="form-control" id="url" type="text" name="comment[url]" size="30" value="<%cookie_url>" />
+      				</div>
+    			</div>
+　  			<div class="form-group">
+      			  <label for="comment" class="col-md-2 control-label"><%template_body></label>
+                  <div class="col-md-6">
+                    <script type="text/javascript" src="<%template_comment_js>"></script>
+                    <textarea class="form-control" id="comment" rows="5" name="comment[body]"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="pass" class="col-md-2 control-label"><%template_password></label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="pass" type="password"  name="comment[pass]" size="20" />
+                  </div>
+                </div>
+                <div class="checkbox">
+                  <label for="himitu" class="col-md-3"><%template_private></label>
+                  <input id="himitu" type="checkbox" name="edit[himitu]" /><%template_private_check>
+                </div>
+                <button type="submit" class="btn btn-primary"><input type="submit" /></button>
+              </fieldset>
+            </form>
           <!--/comment_area-->
-
+          
+          
           <!--edit_area-->
-          <div class="content" id="edit">
-            <h3 class="sub_header"><%template_edit_comment></h3>
-            <div class="form">
-              <form action="./" method="post" name="comment_form" id="comment_form">
-                <dl>
-                  <dt>
-                    <input type="hidden" name="mode" value="edit" />
-                    <input type="hidden" name="mode2" value="edited" />
-                    <input type="hidden" name="edit[rno]" value="<%eno>" />
-                    <label for="name"><%template_name></label>
-                  </dt>
-                  <dd><input id="edit[name]" type="text" name="edit[name]" size="30" value="<%edit_name>" /></dd>
-                  <dt><label for="subject"><%template_title></label></dt>
-                  <dd><input id="subject" type="text" name="edit[title]" size="30" value="<%edit_title>" /></dd>
-                  <dt><label for="mail"><%template_address></label></dt>
-                  <dd><input id="mail" type="text" name="edit[mail]" size="30" value="<%edit_mail>" /></dd>
-                  <dt><label for="url">URL</label></dt>
-                  <dd><input id="url" type="text" name="edit[url]" size="30" value="<%edit_url>" /></dd>
-                  <dt><label for="comment"><%template_body></label></dt>
-                  <dd><script type="text/javascript" src="<%template_comment_js>"></script></dd>
-                  <dd><textarea id="comment" cols="50" rows="5" name="edit[body]"><%edit_body></textarea></dd>
-                  <dt><label for="pass"><%template_password></label></dt>
-                  <dd><input id="pass" type="password" name="edit[pass]" size="20" /></dd>
-                  <dt><%template_private></dt>
-                  <dd><input id="himitu" type="checkbox" name="edit[himitu]" /><label for="himitu"><%template_private_check></label></dd>
-                </dl>
-                <p class="form_btn"><input type="submit" value="<%template_send>" /></p>
-              </form>
-            </div>
-          </div>
+          <form class="form-horizontal">
+            <fieldset>
+                <form action="./" method="post" name="comment_form" id="comment_form">
+                <input type="hidden" name="mode" value="edit" />
+                <input type="hidden" name="mode2" value="edited" />
+                <input type="hidden" name="edit[rno]" value="<%eno>" />
+                <div class="form-group">
+                  <label for="name" class="col-md-2 control-label"><%template_name></label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="name" type="text" name="edit[name]" value="<%edit_name>" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject" class="col-md-2 control-label"><%template_title></label>
+                  <div class="col-md-6">
+                    <input class="form-control" id=<input id="subject" type="text" name="edit[title]" value="<%edit_title>" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="mail" class="col-md-2 control-label"><%template_address></label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="mail" type="text" name="edit[mail]" value="<%edit_mail>" />
+                  </div>
+    		    </div>
+    			<div class="form-group">
+      			  <label for="url" class="col-md-2 control-label">URL</label>
+      				<div class="col-md-6">
+        			  <input class="form-control" id="url" type="text" name="edit[url]" value="<%edit_url>" />
+      				</div>
+    			</div>
+　  			<div class="form-group">
+      			  <label for="comment" class="col-md-2 control-label"><%template_body></label>
+                  <div class="col-md-6">
+                    <script type="text/javascript" src="<%template_comment_js>"></script>
+                    <textarea class="form-control" id="comment" rows="5" name="edit[body]"><%edit_body></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="pass" class="col-md-2 control-label"><%template_password></label>
+                  <div class="col-md-6">
+                    <input class="form-control" id="pass" type="password"  name="edit[pass]" size="20" />
+                  </div>
+                </div>
+                <div class="checkbox">
+                  <label for="himitu" class="col-md-3"><%template_private></label>
+                  <input id="himitu" type="checkbox" name="edit[himitu]" /><%template_private_check>
+                </div>
+                <button type="submit" class="btn btn-primary"><input type="submit" /></button>
+              </fieldset>
+            </form>
           <!--/edit_area-->
 
           <!--trackback_area-->
-          <div class="content" id="tb" >
-            <h3 class="sub_header"><%template_trackback></h3>
-            <div class="trackback">
-              <input onfocus="this.select()" value="<%trackback_url>" readonly="readOnly" /><br />
-              <a href="javascript:window.location.replace('http://blog.fc2.com/?url='+window.location.href);" title="<%template_trackback_this>"><%template_trackback_this></a>
-            </div>
+          <form class="form-horizontal">
+            <fieldset>
+              <div class="form-groupe>
+                <div class="content" id="tb" >
+                  <h4 class="sub_header"><%template_trackback></h4>
+                  <div class="trackback" "col-md-6">
+                    <input class="form-control" onfocus="this.select()" value="<%trackback_url>" readonly="readOnly" /><br />
+                    <a href="javascript:window.location.replace('http://blog.fc2.com/?url='+window.location.href);" title="<%template_trackback_this>"><%template_trackback_this></a>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
             <!--trackback-->
             <div class="sub_content" id="trackback<%tb_no>">
               <h4 class="sub_title"><a href="<%tb_url>" title="<%template_trackback>"><%tb_title></a></h4>
@@ -356,14 +407,15 @@
 
     <div class="clearfix"></div>
 
-    <!-- フッタ -->
-    <div class="footer">
-      <div class="footer-inner">
-        <small><address>Copyright &copy; <%blog_name> All Rights Reserved.</address>
-        <p>Powered by <a href="http://blog.fc2.com/" title="FC2 BLOG">FC2 Blog</a>&nbsp;&nbsp;<%ad>&nbsp;<%ad2></p></small>
+    <div class="well" style="padding: 8px;">
+      <div class="footer">
+        <div class="footer-inner">
+          <small><address>Copyright &copy; <%blog_name> All Rights Reserved.</address>
+          <p>Powered by <a href="http://blog.fc2.com/" title="FC2 BLOG">FC2 Blog</a>&nbsp;&nbsp;<%ad>&nbsp;<%ad2></p></small>
+        </div>
       </div>
     </div>
-
+    
   <!--/container-->  
   </div>
 
