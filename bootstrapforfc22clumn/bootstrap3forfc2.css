@@ -1,3 +1,44 @@
+/************************************************************************************
+カスタムやその他色々については
+Bootstrap3を使ってFC2ブログのテンプレを作ろうその一
+http://mypace75.blog92.fc2.com/blog-entry-955.html
+Bootstrap3を使ってFC2ブログのテンプレを作ろうその二
+http://mypace75.blog92.fc2.com/blog-entry-956.html
+が参考になれば。。。
+*************************************************************************************/
+/************************************************************************************
+CLEAR & ALIGNMENT
+*************************************************************************************/
+.clear {
+  clear: both;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.textleft {
+  text-align: left;
+}
+.textright {
+  text-align: right;
+}
+.textcenter {
+  text-align: center;
+}
+
+
+/* clearfix */
+.clearfix:after, .widget li:after, #body:after, #footer:after, footer:after, .pagenav:after, #main-nav:after, .menu:after, .gallery:after, #content:after
+{ visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix, .widget li, #body, #footer, footer, .pagenav, #main-nav, .menu, .gallery, #content
+{ display: inline-block; }
+/* clearfix for ie7 */
+.clearfix, .widget li, #body, #footer, footer, .pagenav, #main-nav, .menu, .gallery, #content
+{ display: block; zoom: 1; }
+
+
 /* --------------------------------------
 　フォント、フォント色、リンク色
 --------------------------------------- */
@@ -75,7 +116,6 @@ padding-left: 10px;
 
 /* ブログ説明 */
 .header-description {
-font-size: 90%;
 padding-left: 20px; }
 
 /*ナビバー*/
@@ -129,18 +169,17 @@ margin: 30px 0;
 }
  
 /* カテゴリ、コミュニティ */
-.entry-category, .list-inline .community {
-font-size 55%;
-list-style: none; }
+.entry-category .community, .list-inline  {
+list-style: none; 
+border-bottom: 1px solid #99A;
+}
  
 .entry-category li, .community li {
-font-size 55%;
 display: inline;
-margin-right: 10px; }
+border-bottom: 1px solid #99A;
+}
  
-/* タグ */
-.tag { font-size: 86%; }
- 
+
 /* ページトップリンク */
 .pagetop { text-align: right; }
 
@@ -158,6 +197,11 @@ table.fc2_socialbtn {
 margin-top:20px;
 }
 
+/*タブ*/
+.tab-pane li{
+padding: 1px;
+}
+
 /*フッター*/
 .footer-inner {
 border-top: 1px solid #404040;
@@ -169,3 +213,9 @@ text-align: center;
 body {
 webkit-tap-highlight-color: #0085a1;
 }
+
+/* Gistの表示を直すやつ */
+.line-numbers, .line-pre > .line {
+font-size: 12px;
+line-height: 1.4;
+} 
