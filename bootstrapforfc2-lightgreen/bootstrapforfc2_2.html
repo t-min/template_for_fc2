@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="<%template_language>">
+<head>
+  <meta charset="<%template_charset>">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="<%author_name>" />
+  <meta name="description" content="<%introduction>" />
+  <title><%blog_name><!--permanent_area--> |<%sub_title><!--/permanent_area--><!--date_area--> |<!--/date_area--><!--category_area--> |<!--/category_area--><!--not_permanent_area--><%sub_title><!--/not_permanent_area--></title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" charset="<%template_charset>" />
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--jquery-->
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  <!-- カスタマイズ用CSS -->
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="<%css_link>" charset="<%template_charset>" />
+
+  <link rel="top" href="<%url>" title="top" />
+  <!--prevpage-->
+  <link rel="prev" href="<%prevpage_url>" title="<%template_prevpage>" /><!--/prevpage-->
+  <!--nextpage-->
+  <link rel="next" href="<%nextpage_url>" title="<%template_nextpage>" /><!--/nextpage-->
+  <!--preventry-->
+  <link rel="next" href="<%preventry_url>" title="<%preventry_title>" /><!--/preventry-->
+  <!--nextentry-->
+  <link rel="prev" href="<%nextentry_url>" title="<%nextentry_title>" /><!--/nextentry-->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="alternate" type="application/rss+xml" href="<%url>?xml" title="[RSS]" />
+  <link rel="alternate" type="application/rss+xml" href="<%url>?xml&amp;comment" title="[RSS] <%template_comment>" />
+  <link rel="alternate" type="application/rss+xml" href="<%url>?xml&amp;trackback" title="[RSS] <%template_trackback>" />
+
+</head>
+
+<body>
+
+
+<!-- navbar-->
+<div class="navbar navbar-custom navbar-fixed-top">
+ <div class="container">
+   <div class="navbar-header">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="navbar-collapse collapse navbar-responsive-collapse">
+     <ul class="nav navbar-nav">
+       <li><a href="<%url>" accesskey="0" title="<%blog_name>"><%blog_name></a></li>
+       <li><a href="<%url>" title="About">About</a></li><!-- ブログの説明記事のリンクする -->
+       <li><a href="<%url>archives.html" title="List">List</a></li>
+       <li><a href="<%url>?xml" title="RSS">RSS1.0</a></li>
+       <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recent<b class="caret"></b></a>
+         <ul class="dropdown-menu">
+	    <!--recent-->
+           <li>
+             <a href="<%recent_link>" title="<%recent_title>"><%recent_title> (<%recent_month>/<%recent_day>)</a>
+           </li>
+           <!--/recent-->
+           <li>
+             <script language="JavaScript" charset="utf-8">
+             var entry_count =<!--archive--> <%archive_count> +<!--/archive--> 0;
+             document.write('<a href="<%url>?all" title="全ての記事一覧">全ての記事一覧 ',entry_count,"件</a>");
+             </script>
+           </li>
+         </ul>
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Category<b class="caret"></b></a>
+           <ul class="dropdown-menu">
+             <!--category-->
+               <li><a href="<%category_link>" title="<%category_name>"><%category_name> (<%category_count>)</a></li>
+             <!--/category-->
+           </ul>
+         </li>
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archive<b class="caret"></b></a>
+             <ul class="dropdown-menu">
+             <!--archive-->
+               <li><a href="<%archive_link>" title="<%archive_year>-<%archive_month>"><%archive_year>-<%archive_month> (<%archive_count>)</a></li>
+             <!--/archive-->
+           </ul>
+         </li>
+       </li>
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+       <li><a href="<%url>?admin" title="Admin">Admin</a></li>
+     </ul>
+   </div>
+ </div>
+</div>
+
+<!--title-->
+<div class="container">
+  <div class="pageheader">
+    <h1><a href="<%url>" accesskey="0" title="<%blog_name>"><%blog_name></a>  
+    <small><p><%introduction></p></small></h1>
+  </div>
+
+
+  <div class="row">
+    <!-- Page Content -->
+    <div class="container-innner">
+    
+      <div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+
+	  <!--permanent_area-->
+	  <!--topentry-->
+	  <!--breadcrumb-->
+	    <ul class="breadcrumb">
+	    <li><a href="<%url>">HOME</a> <span class="divider">/</span></li>
+	    <li><!--parent_category--><a href="<%topentry_parent_category_link>"><%topentry_parent_category></a> <span class="divider">/</span><!--/parent_category--></li>
+	    <li><a href="<%topentry_category_link>"><%topentry_category></a> <span class="divider">/</span></li>
+	    <li class="active"><%sub_title></li>
+	  </ul>
+	  <!--/topentry-->
+	  <!--/permanent_area-->
+
+	  <!--post-->
+	  <!--topentry-->
+	  <article class="post">
+	    <h2 class="post-title"><a href="<%topentry_link>"><%topentry_title></a></h2>
+	    <ul class="post-meta" "list-inline">
+	       &nbsp<%topentry_year>-<%topentry_month>-<%topentry_day> &nbsp<%topentry_hour>:<%topentry_minute> &nbspby&nbsp;<%author_name>&nbsp     
+	       <!--allow_comment-->Comment&nbsp;:&nbsp;<a href="<%topentry_link>#cm" title="comment"><%topentry_comment_num></a><!--/allow_comment-->
+	       <!--deny_comment--><!--/deny_comment-->
+	       <!--allow_tb-->Trackback&nbsp;:&nbsp;<a href="<%topentry_link>#tb" title="trackback"><%topentry_tb_num></a><!--/allow_tb-->
+	       <!--deny_tb--><!--/deny_tb-->
+	    </ul>
+
+	    <div class="entry-body"><%topentry_body></div>
+
+	    <!--more_link-->
+	    <div class="clearfix"></div>
+	    <a class="btn btn-primary" href="<%topentry_link>#more">続きを読む</a>
+	    <!--/more_link-->
+
+	    <!--more-->
+	    <div class="more" class="clearfix"></div>
+	    <%topentry_more>
+	    <!--/more-->
+
+	    <!--entry-category -->
+	    <ul class="list-inline">
+	      <div class="entry-category">
+		<%template_category>&nbsp;:&nbsp;<a href="<%topentry_category_link>" title="<%template_view_category>"><%topentry_category></a>
+		<!--community-->
+		<div class="community">
+	    <%template_theme>&nbsp;:&nbsp;<a href="<%topentry_thread_link>" title="<%topentry_thread_title>"><%topentry_thread_title></a>&nbsp<%template_genre>&nbsp;:&nbsp;<a href="<%topentry_community_janrelink>" title="<%topentry_community_janrename>"><%topentry_community_janrename></a>
+		</div>
+		<!--/community-->
+	      </div>
+	    </ul>
+	    <!--/entry-category -->
+     
+	    <!--
+	    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+	    xmlns:dc="http://purl.org/dc/elements/1.1/">
+	    <rdf:Description
+	    rdf:about="<%topentry_link>"
+	    trackback:ping="="<%url>tb.php/<%topentry_tb_no>"
+	    dc:title="<%topentry_title>"
+	    dc:identifier="<%topentry_link>"
+	    dc:subject="<%topentry_category>"
+	    dc:description="<%topentry_discription>"
+	    dc:creator="<%author_name>"
+	    dc:date="<%topentry_year>-<%topentry_month>-<%topentry_day>T<%topentry_hour>:<%topentry_minute>:<%topentry_second>+09:00" />
+	    </rdf:RDF>
+	    -->
+	
+	  <!--記事下バナーエリア-->
+	  <!--/記事下バナーエリア-->
+
+	  </article>
+	  <!--/topentry-->
+
+	  <!--permanent_area-->
+	  <ul class="pager">
+	  　　<!--preventry-->
+	    <li class="previous"><a href="<%preventry_url>" title="<%preventry_title>" >←<%preventry_title></a></li>
+	  　　<!--/preventry-->
+	  　　<!--nextentry-->
+	    <li class="next"><a href="<%nextentry_url>" title="<%nextentry_title>" ><%nextentry_title>→</a></li>
+	  　　<!--/nextentry-->
+	  </ul>
+	  <!--/permanent_area-->
+
+	  <!--not_permanent_area-->
+	  <ul class="pager">
+	  　　<!--prevpage-->
+	    <li class="previous"><a href="<%prevpage_url>" title="<%template_prevpage>">←<%template_prevpage></a></li>
+	  　　<!--/prevpage-->
+	  　　<!--nextpage-->
+	    <li class="next"><a href="<%nextpage_url>" title="<%template_nextpage>"><%template_nextpage>→</a></li>
+	  　　<!--/nextpage-->
+	  </ul>
+	  <!--/not_permanent_area-->
+
+	  <!--comment_area-->
+	  <div id="comment-top">
+	    <!--comment-->
+	    <div class="com-entry" id="comment<%comment_no>">
+	      <div class="com_h">
+		<%comment_no>:<%comment_title>
+	      </div>
+	      <div class="com-body">
+		<%comment_body>
+	      <div class="post-meta textright">
+		<span class="post-author"><%comment_mail+name> #<%comment_trip></span>
+		<span class="post-category"><%comment_year>.<%comment_month>.<%comment_day> <%comment_hour>:<%comment_minute></span>
+		<span class="post-tag"><%comment_url+str>[<a href="<%comment_edit_link>">EDIT</a>]</span>
+		<a class="btn" href="#comment_form_top" title="このコメントにレス" onclick="com_res_to(<%comment_no>);">返信</a>
+	      </div>
+	    </div>
+	  </div>
+	  <!--/comment-->
+
+	  <!--commentform-->
+	  <form class="form-horizontal action="./" method="post" name="comment_form" id="comment_form"">
+	    <fieldset>
+	      <h4 class="sub_title"><%template_post_comment></h4>
+	      <input type="hidden" name="mode" value="regist" />
+	      <input type="hidden" name="comment[no]" value="<%pno>" />
+	      <div class="form-group">
+		<label for="name" class="col-md-2 control-label"><%template_name></label>
+		<div class="col-md-6">
+	    <input class="form-control" id="name" type="text" name="comment[name]" value="<%cookie_name>" />
+		</div>
+	      </div>
+	      <div class="form-group">
+		<label for="subject" class="col-md-2 control-label"><%template_title></label>
+		<div class="col-md-6">
+	    <input class="form-control" id="subject" type="text" name="edit[title]" value="<%edit_title>" />
+		</div>
+	      </div>
+	      <div class="form-group">
+		<label for="mail" class="col-md-2 control-label"><%cookie_mail></label>
+		<div class="col-md-6">
+	    <input class="form-control" id="mail" type="text" name="comment[mail]" value="<%cookie_mail>" />
+		</div>
+	   </div>
+	   <div class="form-group">
+	     <label for="url" class="col-md-2 control-label">URL</label>
+	     <div class="col-md-6">
+	       <input class="form-control" id="url" type="text" name="comment[url]" size="30" value="<%cookie_url>" />
+	     </div>
+	   </div>
+	   <div class="form-group">
+	     <label for="comment" class="col-md-2 control-label"><%template_body></label>
+		<div class="col-md-6">
+	    <script type="text/javascript" src="<%template_comment_js>"></script>
+	    <textarea class="form-control" id="comment" rows="5" name="comment[body]"></textarea>
+		</div>
+	      </div>
+	      <div class="form-group">
+		<label for="pass" class="col-md-2 control-label"><%template_password></label>
+		<div class="col-md-6">
+	    <input class="form-control" id="pass" type="password"  name="comment[pass]" size="20" />
+		</div>
+	      </div>
+	      <div class="form-group form-inline">
+		<label for="himitu" class="col-md-3"><%template_private></label>
+		<input id="himitu" type="checkbox" name="edit[himitu]" /><%template_private_check>
+		<input class="btn  btn-default btn-sm" type="submit" />
+	      </div>
+	    </fieldset>
+	  </form>
+	<!--/comment_area-->
+
+
+	<!--edit_area-->
+	<form class="form-horizontal action="./" method="post" name="comment_form" id="comment_form"">
+	  <fieldset>
+	      <input type="hidden" name="mode" value="edit" />
+	      <input type="hidden" name="mode2" value="edited" />
+	      <input type="hidden" name="edit[rno]" value="<%eno>" />
+	      <div class="form-group">
+		<label for="name" class="col-md-2 control-label"><%template_name></label>
+		<div class="col-md-6">
+	    <input class="form-control" id="name" type="text" name="edit[name]" value="<%edit_name>" />
+		</div>
+	      </div>
+	      <div class="form-group">
+		<label for="subject" class="col-md-2 control-label"><%template_title></label>
+		<div class="col-md-6">
+	    <input class="form-control" id="subject" type="text" name="edit[title]" value="<%edit_title>" />
+		</div>
+	      </div>
+	      <div class="form-group">
+		<label for="mail" class="col-md-2 control-label"><%template_address></label>
+		<div class="col-md-6">
+	    <input class="form-control" id="mail" type="text" name="edit[mail]" value="<%edit_mail>" />
+		</div>
+	   </div>
+	   <div class="form-group">
+	   <label for="url" class="col-md-2 control-label">URL</label>
+	     <div class="col-md-6">
+	       <input class="form-control" id="url" type="text" name="edit[url]" value="<%edit_url>" />
+	     </div>
+	   </div>
+	   <div class="form-group">
+	     <label for="comment" class="col-md-2 control-label"><%template_body></label>
+		<div class="col-md-6">
+	    <script type="text/javascript" src="<%template_comment_js>"></script>
+	    <textarea class="form-control" id="comment" rows="5" name="edit[body]"><%edit_body></textarea>
+		</div>
+	      </div>
+	      <div class="form-group">
+		<label for="pass" class="col-md-2 control-label"><%template_password></label>
+		<div class="col-md-6">
+	    <input class="form-control" id="pass" type="password"  name="edit[pass]" size="20" />
+		</div>
+	      </div>
+	      <div class="form-group form-inline">
+		<label for="himitu" class="col-md-3"><%template_private></label>
+		<input id="himitu" type="checkbox" name="edit[himitu]" /><%template_private_check>
+		<input class="btn  btn-default btn-sm" type="submit" />
+	      </div>
+	    </fieldset>
+	  </form>
+	<!--/edit_area-->
+
+	<!--trackback_area-->
+	<form class="form-horizontal">
+	  <fieldset>
+	    <div class="form-groupe>
+	      <div class="content" id="tb" >
+		<h4 class="sub_header"><%template_trackback></h4>
+		<div class="trackback" "col-md-6">
+	    <input class="form-control" onfocus="this.select()" value="<%trackback_url>" readonly="readOnly" /><br />
+	    <a href="javascript:window.location.replace('http://blog.fc2.com/?url='+window.location.href);" title="<%template_trackback_this>"><%template_trackback_this></a>
+		</div>
+	      </div>
+	    </div>
+	  </fieldset>
+	</form>
+	  <!--trackback-->
+	  <div class="sub_content" id="trackback<%tb_no>">
+	    <h4 class="sub_title"><a href="<%tb_url>" title="<%template_trackback>"><%tb_title></a></h4>
+	    <div class="sub_body"><%tb_excerpt></div>
+	    <ul class="sub_footer">
+	      <li><%tb_year>/<%tb_month>/<%tb_day>(<%tb_hour>:<%tb_minute>)</li>
+	      <li><%tb_blog_name></li>
+	    </ul>
+	  </div>
+	<!--/trackback-->
+	</div>
+      <!--/trackback_area-->
+      </div>
+    
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+	<!--plugin-->
+	<!--plugin_first-->
+	<div class="side1">
+	  <h5 style="text-align:<%plugin_first_talign>"><%plugin_first_title></h5>
+	  <p style="text-align:<%plugin_first_ialign>"><%plugin_first_description></p>
+	  <%plugin_first_content>
+	  <p style="text-align:<%plugin_first_ialign>"><%plugin_first_description2></p>
+	</div>
+	<!--/plugin_first-->
+      </div>
+    
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+	<!--plugin_second-->
+	<div class="side2">
+	  <h5 style="text-align:<%plugin_second_talign>"><%plugin_second_title></h5>
+	  <p style="text-align:<%plugin_second_ialign>"><%plugin_second_description></p>
+	  <%plugin_second_content>
+	  <p style="text-align:<%plugin_second_ialign>"><%plugin_second_description2></p>
+	</div>
+	<!--/plugin_second-->
+      </div>
+      <!--/plugin-->
+
+    </div>
+  <!-- /loops-wrapper -->
+  </div>
+  <!-- /container-innner -->
+
+  <div class="clearfix"></div>
+
+  <div class="footer">
+   <div class="footer-inner">
+     <small><address>Copyright &copy; <%blog_name> All Rights Reserved.</address>
+     <p>Powered by <a href="http://blog.fc2.com/" title="FC2 BLOG">FC2 Blog</a>&nbsp;&nbsp;<%ad>&nbsp;<%ad2></p></small>
+   </div>
+  </div>
+</div>
+<!--/container-->
+</body>
+</html>
