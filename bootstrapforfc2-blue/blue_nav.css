@@ -1,0 +1,296 @@
+カスタマイズや解説は
+Bootstrap3でFC2のテンプレを作ろう　2回目（bootstrap-blue-nav)
+http://mypace75.blog92.fc2.com/blog-entry-966.html
+/************************************************************************************
+CLEAR & ALIGNMENT
+*************************************************************************************/
+.clear {
+  clear: both;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.textleft {
+  text-align: left;
+}
+.textright {
+  text-align: right;
+}
+.textcenter {
+  text-align: center;
+}
+
+
+/* clearfix */
+.clearfix:after, .widget li:after, #body:after, #footer:after, footer:after, .pagenav:after, #main-nav:after, .menu:after, .gallery:after, #content:after
+{ visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix, .widget li, #body, #footer, footer, .pagenav, #main-nav, .menu, .gallery, #content
+{ display: inline-block; }
+/* clearfix for ie7 */
+.clearfix, .widget li, #body, #footer, footer, .pagenav, #main-nav, .menu, .gallery, #content
+{ display: block; zoom: 1; }
+
+
+/*navbar*/
+.nav li a:hover,
+.nav li a:focus {
+text-decoration: none;
+background-color: #eeeeee;
+}
+.nav li.disabled a {
+color: #999999;
+}
+.nav li.disabled a:hover,
+.nav li.disabled a:focus {
+color: #999999;
+text-decoration: none;
+background-color: transparent;
+cursor: not-allowed;
+}
+
+
+.navbar-custom {
+background-color: #2fa4e7;
+border-color: #1995dc;
+box-shadow :0 2px 3px;
+}
+.navbar-custom .navbar-brand {
+color: #ffffff;
+}
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+color: #ffffff;
+background-color: none;
+}
+.navbar-custom .navbar-text {
+color: #dddddd;
+}
+.navbar-custom .navbar-nav li a {
+color: #ffffff;
+}
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:focus {
+color: #ffffff;
+background-color: #178acc;
+}
+.navbar-custom .navbar-nav .active a,
+.navbar-custom .navbar-nav .active a:hover,
+.navbar-custom .navbar-nav .active a:focus {
+color: #ffffff;
+background-color: #178acc;
+}
+.navbar-custom .navbar-nav .disabled a,
+.navbar-custom .navbar-nav .disabled a:hover,
+.navbar-custom .navbar-nav .disabled a:focus {
+color: #dddddd;
+background-color: transparent;
+}
+.navbar-custom .navbar-toggle {
+border-color: #178acc;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+background-color: #178acc;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+background-color: #ffffff;
+}
+.navbar-custom .navbar-collapse,
+.navbar-custom .navbar-form {
+border-color: #1995dc;
+}
+.navbar-custom .navbar-nav .open a,
+.navbar-custom .navbar-nav .open a:hover,
+.navbar-custom .navbar-nav .open a:focus {
+background-color: #178acc;
+color: #ffffff;
+}
+@media (max-width: 767px) {
+.navbar-custom .navbar-nav .open .dropdown-menu li a {
+  color: #ffffff;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu li a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu li a:focus {
+    color: #ffffff;
+    background-color: #178acc;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu .active a,
+  .navbar-custom .navbar-nav .open .dropdown-menu .active a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu .active a:focus {
+    color: #ffffff;
+    background-color: #178acc;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu .disabled a,
+  .navbar-custom .navbar-nav .open .dropdown-menu .disabled a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu .disabled a:focus {
+    color: #dddddd;
+    background-color: transparent;
+  }
+}
+.navbar-custom .navbar-link {
+color: #ffffff;
+}
+.navbar-custom .navbar-link:hover {
+color: #ffffff;
+}
+.navbar-custom .btn-link {
+color: #ffffff;
+}
+.navbar-custom .btn-link:hover,
+.navbar-custom .btn-link:focus {
+color: #ffffff;
+}
+.navbar-custom .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-custom .btn-link:hover,
+.navbar-custom .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-custom .btn-link:focus {
+color: #dddddd;
+}
+
+.dropdown-menu {
+font-size: 12px;
+}
+
+/* ページ全体 */
+body {
+padding-top: 60px;
+font-family: 'arial',sans-serif;
+font-size: 85%;
+line-height: 1.75; 
+}
+
+/* ブログ名・ブログの説明 */
+h1 a, h1 a:link, h1 a:visited, header-description, h1 a:hover, h1 a:active {
+color: #404040;
+}
+
+/* 記事タイトル */
+h2{
+padding: 0.5ex 1em;
+color: #ffffff;
+background-color: #2fa4e7;
+border-radius: 10px;
+}
+
+h2 a, h2 a:link, h2 a:visited, header-description, h2 a:hover, h2 a:active {
+color: #ffffff;
+font-size: 25px;
+margin: 10px 0;
+}
+
+/*記事情報*/
+.post-meta{
+font-size:12px;
+border-left:5px solid #2fa4e7;
+border-bottom: 1px solid #2fa4e7;
+}
+
+/*blockquate */
+blockquote {
+color: #808080;
+font-style: italic;
+}
+
+pre { overflow: auto; }
+ 
+ol { list-style: decimal outside; }
+ 
+ul { list-style: disc outside; }
+
+p {
+font-size: 14px;
+line-height: 1.5;
+margin: 30px 0;
+}
+
+/*パンくずリスト*/
+.breadcrumb {
+margin: 5px;
+border: 1px solid #2fa4e7;
+font-size: 12px; 
+box-shadow :1px 1px 2px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+/* 記事 */
+article {
+padding:5px 10px;
+margin-bottom: 30px; 
+border :1px solid #3498db;
+box-shadow :1px 1px 2px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+/*fc2ソーシャルボタン*/
+.fc2_footer {
+margin-top:20px;
+}
+
+/* カテゴリ、コミュニティ */
+.category,.community {
+font-size: 12px;
+list-style: none; 
+}
+
+/*ページャー*/
+.pager li  a, .pager li  span{
+border :1px solid #3498db;
+box-shadow :1px 1px 2px;
+}
+
+/*プラグイン*/
+.side1,
+.side2{
+margin: 5px;
+padding:3px;
+border :1px solid #3498db;
+box-shadow :1px 1px 2px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+.side1 h5,
+.side2 h5{
+padding: 0.5ex 1em;
+color: #ffffff;
+background-color: #2fa4e7;
+border-radius: 10px;
+}
+
+.side1 p, 
+.side2 p, 
+.side1 a, 
+.side2 a,
+.side1 div div a,
+.side2 div div a,
+.side1 ul li a,
+.side2 ul li a{
+padding: 0 5px 0 5px;
+font-size: 12px;
+line-height: 1.25;
+margin: 10px 0;
+}
+
+/*フッター*/
+.footer-inner {
+border-top: 1px solid #2fa4e7;
+text-align: center;
+}
+
+body {
+webkit-tap-highlight-color: #0085a1;
+}
+
+/* Gistの表示を直すやつ */
+.line-numbers, .line-pre .line {
+font-size: 12px;
+line-height: 1.4;
+} 

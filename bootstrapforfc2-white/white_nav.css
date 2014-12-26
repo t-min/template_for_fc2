@@ -1,0 +1,183 @@
+カスタマイズや解説は
+Bootstrap3でFC2のテンプレを作ろう　2回目（bootstrap-blue-nav)
+http://mypace75.blog92.fc2.com/blog-entry-966.html
+/************************************************************************************
+CLEAR & ALIGNMENT
+*************************************************************************************/
+.clear {
+  clear: both;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.textleft {
+  text-align: left;
+}
+.textright {
+  text-align: right;
+}
+.textcenter {
+  text-align: center;
+}
+
+
+/* clearfix */
+.clearfix:after, .widget li:after, #body:after, #footer:after, footer:after, .pagenav:after, #main-nav:after, .menu:after, .gallery:after, #content:after
+{ visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.clearfix, .widget li, #body, #footer, footer, .pagenav, #main-nav, .menu, .gallery, #content
+{ display: inline-block; }
+/* clearfix for ie7 */
+.clearfix, .widget li, #body, #footer, footer, .pagenav, #main-nav, .menu, .gallery, #content
+{ display: block; zoom: 1; }
+
+
+/*navbar*/
+.dropdown-menu {
+font-size: 12px;
+}
+.navbar{
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+/* ページ全体 */
+body {
+padding-top: 60px;
+font-family: 'arial',sans-serif;
+font-size: 85%;
+line-height: 1.75; 
+}
+
+/* ブログ名・ブログの説明 */
+h1 a, h1 a:link, h1 a:visited, header-description, h1 a:hover, h1 a:active {
+color: #404040;
+}
+
+/* 記事タイトル */
+h2{
+padding: 0.5ex 1em;
+color: #ffffff;
+background-color: #666;
+border-radius: 10px;
+}
+
+h2 a, h2 a:link, h2 a:visited, header-description, h2 a:hover, h2 a:active {
+color: #ffffff;
+font-size: 25px;
+margin: 10px 0;
+}
+
+/*記事情報*/
+.post-meta{
+font-size:12px;
+border-left:5px solid #666;
+border-bottom: 1px solid #666;
+}
+
+/*blockquate */
+blockquote {
+color: #808080;
+font-style: italic;
+}
+
+pre { overflow: auto; }
+ 
+ol { list-style: decimal outside; }
+ 
+ul { list-style: disc outside; }
+
+p {
+font-size: 14px;
+line-height: 1.5;
+margin: 30px 0;
+}
+
+/*パンくずリスト*/
+.breadcrumb {
+margin: 5px;
+border: 1px solid #666;
+font-size: 12px; 
+box-shadow :1px 1px 2px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+/* 記事 */
+article {
+padding:5px 10px;
+margin-bottom: 30px; 
+border :1px solid #666;
+box-shadow :1px 1px 2px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+/*fc2ソーシャルボタン*/
+.fc2_footer {
+margin-top:20px;
+}
+
+/* カテゴリ、コミュニティ */
+.category,.community {
+font-size: 12px;
+list-style: none; 
+}
+
+/*ページャー*/
+.pager li  a, .pager li  span{
+border :1px solid #666;
+box-shadow :1px 1px 2px;
+}
+
+/*プラグイン*/
+.side1,
+.side2{
+margin: 5px;
+padding:3px;
+border :1px solid #666;
+box-shadow :1px 1px 2px;
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+.side1 h5,
+.side2 h5{
+padding: 0.5ex 1em;
+color: #ffffff;
+background-color: #666;
+border-radius: 10px;
+}
+
+.side1 p, 
+.side2 p, 
+.side1 a, 
+.side2 a,
+.side1 div div a,
+.side2 div div a,
+.side1 ul li a,
+.side2 ul li a{
+padding: 0 5px 0 5px;
+font-size: 12px;
+line-height: 1.25;
+margin: 10px 0;
+}
+
+/*フッター*/
+.footer-inner {
+border-top: 1px solid #666;
+text-align: center;
+}
+
+body {
+webkit-tap-highlight-color: #0085a1;
+}
+
+/* Gistの表示を直すやつ */
+.line-numbers, .line-pre .line {
+font-size: 12px;
+line-height: 1.4;
+} 
